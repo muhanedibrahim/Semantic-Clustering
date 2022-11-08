@@ -242,7 +242,7 @@ miner = miners.TripletMarginMiner(
     margin=0.2, distance=distance, type_of_triplets="semihard"
 )
 #optimizer=torch.optim.SGD(params=new_model.parameters(),lr=1e-1, momentum=0.9)
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(new_model.parameters(), lr=0.01)
 s1=0
 s2=0
 lr_opt=opt(optimizer,mode='min',factor=0.1,patience=5,threshold=0.0001,min_lr=0)
